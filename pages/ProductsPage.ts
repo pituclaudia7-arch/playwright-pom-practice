@@ -24,14 +24,4 @@ export class ProductsPage {
   async openBronzerProduct() {
     await this.bronzerProductLink.click();
   }
-
-  async getProductHeading() {
-    await this.productHeading.waitFor();
-    return this.productHeading;
-  }
-
-  async isProductPageVisible() {
-    await this.productHeading.waitFor();
-    return this.productHeading;
-  }
 }
