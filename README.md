@@ -1,38 +1,25 @@
-# 🎭 Playwright POM Practice
+# Playwright Page Object Model practice
 
-This project demonstrates automated testing using Playwright with the Page Object Model (POM) design pattern.
+Playwright and TypeScript tests for login and product navigation on a demo store. This project separates reusable page interactions from test scenarios using the Page Object Model (POM).
 
-## 🚀 Technologies Used
-- Playwright
-- TypeScript
-- Node.js
+## Start here
 
-## 📂 Project Structure
+| Scenario | Test | Page objects |
+| --- | --- | --- |
+| Valid login, invalid password, and blank form | [Login spec](tests/login-pom.spec.ts) | [LoginPage](pages/LoginPage.ts), [HomePage](pages/HomePage.ts) |
+| Open the Makeup category and verify the Skinsheen Bronzer Stick product page | [Product spec](tests/products-pom.spec.ts) | [ProductsPage](pages/ProductsPage.ts) |
 
-pages/
-  LoginPage.ts
-  HomePage.ts
-  ProductsPage.ts
+## Run locally
 
-tests/
-  login-pom.spec.ts
-  products-pom.spec.ts
-
-## 🧪 Tests Included
-
-### 🔐 Login Tests
-- Valid login
-- Invalid login
-- Empty login fields
-
-### 🛍️ Product Tests
-- Navigate to product category
-- Open product page
-- Verify product page is visible
-
-## ▶️ Run Tests
+Use Node.js LTS and npm. From the repository root:
 
 ```bash
-npx playwright test
+npm ci
+npx playwright install
+npx playwright test --project=chromium
+npx playwright show-report
+```
 
-💡 Created as part of QA learning journey (HYF Track)
+Run `npx playwright test` to include Chromium, Firefox, and WebKit. The suite uses a hosted demo, so it needs network access.
+
+[GitHub Actions runs](https://github.com/pituclaudia7-arch/playwright-pom-practice/actions/workflows/playwright.yml) show workflow results. Runs that reach test execution can include a downloadable HTML report.
