@@ -9,6 +9,10 @@ Playwright and TypeScript tests for login and product navigation on a demo store
 | Valid login, invalid password, and blank form | [Login spec](tests/login-pom.spec.ts) | [LoginPage](pages/LoginPage.ts), [HomePage](pages/HomePage.ts) |
 | Open the Makeup category and verify the Skinsheen Bronzer Stick product page | [Product spec](tests/products-pom.spec.ts) | [ProductsPage](pages/ProductsPage.ts) |
 
+## Verified CI run
+
+The [default-branch run](https://github.com/pituclaudia7-arch/playwright-pom-practice/actions/runs/42270227488) passed all four scenarios in Chromium, Firefox, and WebKit (11 browser-test executions).
+
 ## Run locally
 
 Use Node.js LTS and npm. From the repository root:
