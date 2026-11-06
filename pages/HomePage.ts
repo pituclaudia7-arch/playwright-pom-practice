@@ -8,9 +8,4 @@ export class HomePage {
     this.page = page;
     this.accountHeading = page.getByRole('heading', { name: /my account/i });
   }
-
-  async isLoggedIn() {
-    await this.accountHeading.waitFor();
-    return this.accountHeading;
-  }
 }
