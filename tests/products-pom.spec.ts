@@ -13,6 +13,6 @@ test('User can open a product with POM', async ({ page }) => {
 
   // Assert
   await expect(page).toHaveURL(/product/i);
-  await expect(await productsPage.isProductPageVisible()).toBeVisible();
+  await expect(productsPage.productHeading).toBeVisible();
   await expect(page.getByText('$')).toBeVisible();
 });
