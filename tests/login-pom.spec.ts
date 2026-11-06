@@ -15,7 +15,7 @@ test('Valid login with POM', async ({ page }) => {
   await loginPage.login('aguspe', '12341234');
 
   // Assert
-  await expect(await homePage.isLoggedIn()).toBeVisible();
+  await expect(homePage.accountHeading).toBeVisible();
 });
 
 test('Invalid login with POM', async ({ page }) => {
@@ -43,6 +43,7 @@ test('Empty login fields with POM', async ({ page }) => {
 
   // Assert
   await expect(page).toHaveURL(/login/i);
-  await expect(page.locator('#loginFrm_loginname')).toHaveAttribute('required', '');
-  await expect(page.locator('#loginFrm_password')).toHaveAttribute('required', '');
+  await expect(page.locator('#loginFrm_loginname:invalid')).toBeVisible();
+  await expect(page.locator('#loginFrm_password:invalid')).toBeVisible();
+  await expect(page.getByRole('heading', { name: /my account/i })).toHaveCount(0);
 });
