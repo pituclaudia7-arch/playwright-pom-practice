@@ -11,7 +11,7 @@ Playwright and TypeScript tests for login and product navigation on a demo store
 
 ## Verified CI run
 
-The [default-branch run](https://github.com/pituclaudia7-arch/playwright-pom-practice/actions/runs/42270227488) passed all four scenarios in Chromium, Firefox, and WebKit (11 browser-test executions).
+The [verified default-branch run](https://github.com/pituclaudia7-arch/playwright-pom-practice/actions/runs/42270804852) passed all 12 browser-test executions across Chromium, Firefox, and WebKit.
 
 ## Run locally
 
